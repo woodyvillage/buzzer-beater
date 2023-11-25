@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/l10n/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:buzzer_beater/view/body/application_frame.dart';
 
 class ApplicationRoot extends StatelessWidget {
@@ -8,12 +8,9 @@ class ApplicationRoot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // このタイトルどこで使ってる？
-      title: 'Flutter Demo',
-
       // Localization
-      localizationsDelegates: L10n.localizationsDelegates,
-      supportedLocales: L10n.supportedLocales,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
 
       // Theme
       theme: ThemeData(
