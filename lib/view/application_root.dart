@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:buzzer_beater/l10n/l10n.dart';
-import 'package:buzzer_beater/view/contents.dart';
+import 'package:buzzer_beater/view/body/application_frame.dart';
 
-class ApplicationFrame extends StatelessWidget {
-  const ApplicationFrame({super.key});
+class ApplicationRoot extends StatelessWidget {
+  const ApplicationRoot({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class ApplicationFrame extends StatelessWidget {
 
       // Contents
       debugShowCheckedModeBanner: false,
-      home: const ApplicationContents(),
+      home: ApplicationFrame(),
     );
   }
 }
