@@ -27,7 +27,8 @@ final contentsIcons = [
   const Icon(Icons.history),
 ];
 
-final contentsTexts = List<String>.filled(5, '');
+// final contentsTexts = List<String>.filled(5, '');
+final contentsTexts = ["チーム", "メンバー", "ロースター", "試合", "成績"];
 
 final PageController settingsController = PageController(
   initialPage: 0,

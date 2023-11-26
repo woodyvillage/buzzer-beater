@@ -4,7 +4,6 @@ import 'package:buzzer_beater/view/body/configuration_frame.dart';
 
 class ApplicationHeader extends StatelessWidget implements PreferredSizeWidget {
   const ApplicationHeader({super.key, required this.isView});
-
   final bool isView;
 
   @override

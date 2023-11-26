@@ -1,5 +1,6 @@
 {
   "@@locale": "ja",
 
-  "applicationTitle": "ミニバススコアブック"
+  "applicationTitle": "ミニバススコアブック",
+  "applicationSettingTitle": "設定画面"
 }

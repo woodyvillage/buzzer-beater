@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:buzzer_beater/utility/route_position.dart';
+import 'package:buzzer_beater/utility/navigator_position.dart';
 import 'package:buzzer_beater/view/const/application_const.dart';
 
 class ApplicationContents extends StatefulWidget {
@@ -19,18 +19,11 @@ class _ApplicationContentsState extends State<ApplicationContents> {
     contentsController.addListener(() {
       setState(() {
         // BottomNavigationBarItemの更新を促す
-        // context.read<RoutePosition>().swiped();
         context
-            .read<RoutePosition>()
+            .read<NavigatorPosition>()
             .changed(contentsController.page?.round() ?? 0);
       });
     });
-  }
-
-  @override
-  void dispose() {
-    contentsController.dispose();
-    super.dispose();
   }
 
   @override
