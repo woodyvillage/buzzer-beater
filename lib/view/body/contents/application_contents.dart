@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:buzzer_beater/utility/route_position.dart';
 import 'package:buzzer_beater/view/const/application_const.dart';
-import 'package:buzzer_beater/view/body/contents/match/body.dart';
-import 'package:buzzer_beater/view/body/contents/member/body.dart';
-import 'package:buzzer_beater/view/body/contents/result/body.dart';
-import 'package:buzzer_beater/view/body/contents/roster/body.dart';
-import 'package:buzzer_beater/view/body/contents/team/body.dart';
 
 class ApplicationContents extends StatefulWidget {
   const ApplicationContents({super.key});
@@ -17,11 +14,22 @@ class _ApplicationContentsState extends State<ApplicationContents> {
   @override
   void initState() {
     super.initState();
+
+    // ページが変更されたときに呼ばれるコールバック
+    contentsController.addListener(() {
+      setState(() {
+        // BottomNavigationBarItemの更新を促す
+        // context.read<RoutePosition>().swiped();
+        context
+            .read<RoutePosition>()
+            .changed(contentsController.page?.round() ?? 0);
+      });
+    });
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    contentsController.dispose();
     super.dispose();
   }
 
@@ -39,14 +47,8 @@ class _ApplicationContentsState extends State<ApplicationContents> {
         // 可変ページャー
         Expanded(
           child: PageView(
-            controller: controller,
-            children: [
-              TeamBody(),
-              MemberBody(),
-              RosterBody(),
-              MatchBody(),
-              ResultBody(),
-            ],
+            controller: contentsController,
+            children: contentsClasses,
           ),
         ),
       ],

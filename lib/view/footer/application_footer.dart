@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:buzzer_beater/utility/route_position.dart';
 import 'package:buzzer_beater/view/const/application_const.dart';
 
 class ApplicationFooter extends StatefulWidget {
@@ -14,33 +16,32 @@ class _ApplicationFooterState extends State<ApplicationFooter> {
   @override
   void initState() {
     super.initState();
-    _buildNavigationItem();
-  }
 
-  void _buildNavigationItem() {
-    // NavigationUtility util = NavigationUtility();
-    for (var route in routeset) {
+    // BottomNavigationBarItem構築
+    for (var i = 0; i < contentsIcons.length; i++) {
       bottomNavigationBarItems.add(BottomNavigationBarItem(
-        icon: route['icon'],
-        label: route['name'],
+        icon: contentsIcons[i],
+        label: contentsTexts[i].toString(),
       ));
     }
   }
 
-  // void _onItemTapped(int index) {
-  //   setState(() {
-  //     selectedRoute = index;
-  //   });
-  // }
+  void onItemTapped(int index) {
+    setState(() {
+      // BottomNavigationBarItemの更新を促す
+      Provider.of<RoutePosition>(context, listen: false).changed(index);
+      contentsController.jumpToPage(index);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    int selectedIndex = 0;
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       items: bottomNavigationBarItems,
-      currentIndex: selectedIndex,
-      // onTap: onItemTapped,
+      // selectedRouteの現在値をcurrentとする
+      currentIndex: Provider.of<RoutePosition>(context).selectedRoute,
+      onTap: onItemTapped,
     );
   }
 }

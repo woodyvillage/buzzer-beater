@@ -22,7 +22,7 @@ class ApplicationRoot extends StatelessWidget {
 
       // Contents
       debugShowCheckedModeBanner: false,
-      home: ApplicationFrame(),
+      home: const ApplicationFrame(),
     );
   }
 }
