@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:buzzer_beater/utility/route_position.dart';
 import 'package:buzzer_beater/view/const/application_const.dart';
@@ -16,12 +17,22 @@ class _ApplicationFooterState extends State<ApplicationFooter> {
   @override
   void initState() {
     super.initState();
+  }
 
-    // BottomNavigationBarItem構築
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    contentsTexts[0] = AppLocalizations.of(context)!.routeTeam;
+    contentsTexts[1] = AppLocalizations.of(context)!.routeMember;
+    contentsTexts[2] = AppLocalizations.of(context)!.routeRoster;
+    contentsTexts[3] = AppLocalizations.of(context)!.routeMatch;
+    contentsTexts[4] = AppLocalizations.of(context)!.routeResult;
+
     for (var i = 0; i < contentsIcons.length; i++) {
       bottomNavigationBarItems.add(BottomNavigationBarItem(
         icon: contentsIcons[i],
-        label: contentsTexts[i].toString(),
+        label: contentsTexts[i],
       ));
     }
   }
