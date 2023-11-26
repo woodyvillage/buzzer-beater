@@ -47,3 +47,7 @@ final settingsClasses = [
 final settingsIcons = [
   const Icon(Icons.home),
 ];
+
+final settingsTexts = [
+  "一般",
+];

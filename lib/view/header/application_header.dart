@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:buzzer_beater/view/body/configuration_frame.dart';
 
 class ApplicationHeader extends StatelessWidget implements PreferredSizeWidget {
   const ApplicationHeader({super.key, required this.isView});
@@ -21,13 +22,13 @@ class ApplicationHeader extends StatelessWidget implements PreferredSizeWidget {
             child: IconButton(
               icon: const Icon(Icons.settings),
               onPressed: () {
-                // MaterialPageRoute settingPageRoute = MaterialPageRoute(
-                //   builder: (context) => SettingBody(),
-                // );
-                // Navigator.push(
-                //   context,
-                //   settingPageRoute,
-                // );
+                MaterialPageRoute settingPageRoute = MaterialPageRoute(
+                  builder: (context) => const ConfigurationFrame(),
+                );
+                Navigator.push(
+                  context,
+                  settingPageRoute,
+                );
               },
             ),
           ),
