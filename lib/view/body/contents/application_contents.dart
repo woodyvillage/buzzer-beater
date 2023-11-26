@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:buzzer_beater/view/const/application_const.dart';
 import 'package:buzzer_beater/view/body/contents/match/body.dart';
 import 'package:buzzer_beater/view/body/contents/member/body.dart';
 import 'package:buzzer_beater/view/body/contents/result/body.dart';
@@ -13,19 +14,9 @@ class ApplicationContents extends StatefulWidget {
 }
 
 class _ApplicationContentsState extends State<ApplicationContents> {
-  var pageViewInitialized = false;
-  final controller = PageController(
-    initialPage: 0,
-    viewportFraction: 1.0,
-  );
-
   @override
   void initState() {
     super.initState();
-
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      pageViewInitialized = true;
-    });
   }
 
   @override
