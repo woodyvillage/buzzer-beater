@@ -37,6 +37,7 @@ class _ApplicationFooterState extends State<ApplicationFooter> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
+      selectedItemColor: Theme.of(context).primaryColorDark,
       items: bottomNavigationBarItems,
       // selectedRouteの現在値をcurrentとする
       currentIndex: Provider.of<NavigatorPosition>(context).selectedRoute,
