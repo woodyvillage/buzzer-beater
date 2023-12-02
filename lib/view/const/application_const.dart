@@ -44,3 +44,27 @@ final settingsIcons = [
 ];
 
 final settingsTexts = List<String>.filled(1, '');
+
+final floaterClasses = [
+  TeamBody(),
+  MemberBody(),
+  RosterBody(),
+  MatchBody(),
+  null,
+];
+
+final floaterIcon = [
+  const Icon(Icons.add),
+  const Icon(Icons.person_add),
+  const Icon(Icons.playlist_add),
+  const Icon(Icons.post_add),
+  null,
+];
+
+final floaterText = [
+  "チーム追加",
+  "メンバー追加",
+  "メンバー登録",
+  "試合開始",
+  null,
+];
