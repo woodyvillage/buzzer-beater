@@ -19,7 +19,7 @@ class _ApplicationFrameState extends State<ApplicationFrame> {
       appBar: ApplicationHeader(isView: true),
       // コンテンツ
       body: ApplicationContents(),
-      // フローティングボタ
+      // フローティングボタン
       floatingActionButton: ApplicationFloater(),
       // ナビゲーター
       bottomNavigationBar: ApplicationFooter(),
