@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/body/contents/match/body.dart';
-import 'package:buzzer_beater/view/body/contents/member/body.dart';
-import 'package:buzzer_beater/view/body/contents/result/body.dart';
-import 'package:buzzer_beater/view/body/contents/roster/body.dart';
-import 'package:buzzer_beater/view/body/contents/team/body.dart';
+import 'package:buzzer_beater/view/body/contents/match/match_body.dart';
+import 'package:buzzer_beater/view/body/contents/member/member_body.dart';
+import 'package:buzzer_beater/view/body/contents/result/result_body.dart';
+import 'package:buzzer_beater/view/body/contents/roster/roster_body.dart';
+import 'package:buzzer_beater/view/body/contents/team/team_body.dart';
 import 'package:buzzer_beater/view/body/settings/application/body.dart';
 
 final PageController contentsController = PageController(
@@ -12,11 +12,11 @@ final PageController contentsController = PageController(
 );
 
 final contentsClasses = [
-  TeamBody(),
-  MemberBody(),
-  RosterBody(),
-  MatchBody(),
-  ResultBody(),
+  const TeamBody(),
+  const MemberBody(),
+  const RosterBody(),
+  const MatchBody(),
+  const ResultBody(),
 ];
 
 final contentsIcons = [
@@ -45,11 +45,17 @@ final settingsIcons = [
 
 final settingsTexts = List<String>.filled(1, '');
 
+const int floaterTeam = 0;
+const int floaterMember = 1;
+const int floaterRoster = 2;
+const int floaterMatch = 3;
+const int floaterResult = 4;
+
 final floaterClasses = [
-  TeamBody(),
-  MemberBody(),
-  RosterBody(),
-  MatchBody(),
+  const TeamBody(),
+  const MemberBody(),
+  const RosterBody(),
+  const MatchBody(),
   null,
 ];
 
@@ -64,7 +70,23 @@ final floaterIcon = [
 final floaterText = [
   "チーム追加",
   "メンバー追加",
-  "メンバー登録",
+  "出場選手登録",
   "試合開始",
   null,
+];
+
+final formIcon = [
+  const Icon(Icons.add_circle),
+  const Icon(Icons.cancel),
+  const Icon(Icons.remove_circle),
+  const Icon(Icons.check_circle),
+  const Icon(Icons.play_circle_fill),
+];
+
+final formText = [
+  const Text('追加'),
+  const Text('取消'),
+  const Text('削除'),
+  const Text('更新'),
+  const Text('開始'),
 ];

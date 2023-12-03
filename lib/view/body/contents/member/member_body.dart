@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-// import 'package:buzzer_beater/view/match/list.dart';
+class MemberBody extends StatelessWidget {
+  const MemberBody({super.key});
 
-class MatchBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
+      child: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: Text("match"),
+        child: const Text("member"),
       ),
     );
   }

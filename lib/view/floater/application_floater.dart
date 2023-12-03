@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:buzzer_beater/utility/floater_action.dart';
 import 'package:buzzer_beater/utility/navigator_position.dart';
 import 'package:buzzer_beater/view/const/application_const.dart';
 
@@ -29,7 +30,7 @@ class _ApplicationFloaterState extends State<ApplicationFloater> {
         icon: floaterIcon[index],
         label: Text(floaterText[index]!),
         onPressed: () {
-          //   dispatch(context, index);
+          FloaterAction.dispatch(context, index);
         },
       );
     }
