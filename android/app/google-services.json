@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "559186602722",
+    "project_id": "buzzer-beater-9853c",
+    "storage_bucket": "buzzer-beater-9853c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559186602722:android:c0d19f9531cbb4ffca0cbb",
+        "android_client_info": {
+          "package_name": "com.woodyvillage.buzzer_beater.buzzer_beater"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr7WvBQvW9U6Sm5kXXDZRy7u6cPA71ExI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
