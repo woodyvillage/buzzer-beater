@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ApplicationBody extends StatelessWidget {
+class GeneralBody extends StatelessWidget {
+  const GeneralBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

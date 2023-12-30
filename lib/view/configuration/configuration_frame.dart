@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/body/settings/application_settings.dart';
+import 'package:buzzer_beater/view/configuration/contents/configuration_contents.dart';
 import 'package:buzzer_beater/view/header/application_header.dart';
 
 class ConfigurationFrame extends StatelessWidget {
@@ -11,7 +11,7 @@ class ConfigurationFrame extends StatelessWidget {
       // ヘッダー
       appBar: ApplicationHeader(isView: false),
       // コンテンツ
-      body: ApplicationSettings(),
+      body: ConfigurationContents(),
     );
   }
 }
