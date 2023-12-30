@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/const/application_const.dart';
+import 'package:buzzer_beater/const/application_const.dart';
 
 class CommandWidget {
-  static Widget build(BuildContext context,bool edit) {
+  static Widget build(BuildContext context, bool edit) {
     return Container(
       margin: const EdgeInsets.only(right: 15),
       child: Row(
@@ -32,34 +32,33 @@ class CommandWidget {
   }
 
   static Widget cancelButton(BuildContext context) {
-      return Row(
-        children: <Widget>[
-          Padding(padding: const EdgeInsets.symmetric(horizontal: 5)),
-          ElevatedButton.icon(
-            icon:  formIcon[1],
-            label:  formText[1],
-            style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white,
-              backgroundColor: Colors.orange,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
+    return Row(
+      children: <Widget>[
+        const Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
+        ElevatedButton.icon(
+          icon: formIcon[1],
+          label: formText[1],
+          style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.orange,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
             ),
-      onPressed: () => Navigator.pop(context),
           ),
-        ],
-      );
+          onPressed: () => Navigator.pop(context),
+        ),
+      ],
+    );
   }
-
 
   static Widget deleteButton(bool edit) {
     if (edit) {
       return Row(
         children: <Widget>[
-          Padding(padding: const EdgeInsets.symmetric(horizontal: 5)),
+          const Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
           ElevatedButton.icon(
-            icon:  formIcon[2],
-            label:  formText[2],
+            icon: formIcon[2],
+            label: formText[2],
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white,
               backgroundColor: Colors.red,

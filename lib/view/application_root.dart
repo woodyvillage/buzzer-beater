@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:buzzer_beater/view/body/application_frame.dart';
 
 class ApplicationRoot extends StatelessWidget {
-  const ApplicationRoot({super.key});
+  const ApplicationRoot({super.key, required this.child});
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class ApplicationRoot extends StatelessWidget {
 
       // Contents
       debugShowCheckedModeBanner: false,
-      home: const ApplicationFrame(),
+      home: child,
     );
   }
 }

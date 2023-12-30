@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/body/contents/match/match_form.dart';
-import 'package:buzzer_beater/view/body/contents/member/member_form.dart';
-import 'package:buzzer_beater/view/body/contents/roster/roster_form.dart';
-import 'package:buzzer_beater/view/body/contents/team/team_form.dart';
-import 'package:buzzer_beater/view/const/application_const.dart';
+import 'package:buzzer_beater/view/application/contents/match/match_form.dart';
+import 'package:buzzer_beater/view/application/contents/member/member_form.dart';
+import 'package:buzzer_beater/view/application/contents/roster/roster_form.dart';
+import 'package:buzzer_beater/view/application/contents/team/team_form.dart';
+import 'package:buzzer_beater/const/application_const.dart';
 
 class FloaterAction {
   static dispatch(BuildContext context, int index) {
