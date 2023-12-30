@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/body/contents/application_contents.dart';
+import 'package:buzzer_beater/view/application/contents/application_contents.dart';
 import 'package:buzzer_beater/view/floater/application_floater.dart';
 import 'package:buzzer_beater/view/footer/application_footer.dart';
 import 'package:buzzer_beater/view/header/application_header.dart';

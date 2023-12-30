@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/body/contents/widget/command_widget.dart';
-import 'package:buzzer_beater/view/const/application_const.dart';
+import 'package:buzzer_beater/view/application/contents/widget/command_widget.dart';
+import 'package:buzzer_beater/const/application_const.dart';
 
 class MatchForm extends StatefulWidget {
   const MatchForm({super.key, required this.edit});

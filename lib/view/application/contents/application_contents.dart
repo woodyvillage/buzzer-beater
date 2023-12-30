@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:buzzer_beater/utility/navigator_position.dart';
-import 'package:buzzer_beater/view/const/application_const.dart';
+import 'package:buzzer_beater/const/application_const.dart';
 
 class ApplicationContents extends StatefulWidget {
   const ApplicationContents({super.key});

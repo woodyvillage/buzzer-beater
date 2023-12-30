@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/body/contents/widget/command_widget.dart';
-import 'package:buzzer_beater/view/const/application_const.dart';
+import 'package:buzzer_beater/view/application/contents/widget/command_widget.dart';
+import 'package:buzzer_beater/const/application_const.dart';
 
-class MemberForm extends StatefulWidget {
-  const MemberForm({super.key, required this.edit});
+class RosterForm extends StatefulWidget {
+  const RosterForm({super.key, required this.edit});
   final bool edit;
 
   @override
-  State createState() => _MemberFormState();
+  State createState() => _RosterFormState();
 }
 
-class _MemberFormState extends State<MemberForm> {
+class _RosterFormState extends State<RosterForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Text(floaterText[floaterMember]!),
+        title: Text(floaterText[floaterRoster]!),
       ),
       body: GestureDetector(
         onTap: () {
