@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/body/contents/match/match_body.dart';
-import 'package:buzzer_beater/view/body/contents/member/member_body.dart';
-import 'package:buzzer_beater/view/body/contents/result/result_body.dart';
-import 'package:buzzer_beater/view/body/contents/roster/roster_body.dart';
-import 'package:buzzer_beater/view/body/contents/team/team_body.dart';
-import 'package:buzzer_beater/view/body/settings/application/body.dart';
+import 'package:buzzer_beater/view/application/contents/match/match_body.dart';
+import 'package:buzzer_beater/view/application/contents/member/member_body.dart';
+import 'package:buzzer_beater/view/application/contents/result/result_body.dart';
+import 'package:buzzer_beater/view/application/contents/roster/roster_body.dart';
+import 'package:buzzer_beater/view/application/contents/team/team_body.dart';
 
 final PageController contentsController = PageController(
   initialPage: 0,
@@ -27,23 +26,7 @@ final contentsIcons = [
   const Icon(Icons.history),
 ];
 
-// final contentsTexts = List<String>.filled(5, '');
 final contentsTexts = ["チーム", "メンバー", "ロースター", "試合", "成績"];
-
-final PageController settingsController = PageController(
-  initialPage: 0,
-  viewportFraction: 1.0,
-);
-
-final settingsClasses = [
-  ApplicationBody(),
-];
-
-final settingsIcons = [
-  const Icon(Icons.home),
-];
-
-final settingsTexts = List<String>.filled(1, '');
 
 const int floaterTeam = 0;
 const int floaterMember = 1;
