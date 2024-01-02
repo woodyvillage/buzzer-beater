@@ -27,6 +27,7 @@ class _ApplicationFloaterState extends State<ApplicationFloater> {
     } else {
       return FloatingActionButton.extended(
         backgroundColor: Theme.of(context).primaryColorDark,
+        foregroundColor: Colors.white,
         icon: floaterIcon[index],
         label: Text(floaterText[index]!),
         onPressed: () {

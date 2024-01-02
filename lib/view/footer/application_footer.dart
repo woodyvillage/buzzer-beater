@@ -26,9 +26,6 @@ class _ApplicationFooterState extends State<ApplicationFooter> {
 
   void onItemTapped(int index) {
     setState(() {
-      // BottomNavigationBarItemの更新を促す
-      Provider.of<NavigatorPositionService>(context, listen: false)
-          .changed(index);
       contentsController.animateToPage(index,
           duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
     });

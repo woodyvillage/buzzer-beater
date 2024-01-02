@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:buzzer_beater/const/configuration_const.dart';
+import 'package:buzzer_beater/view/design/wrapper/atoms_widget.dart';
 
-class MessageDialogAtoms extends StatelessWidget {
-  const MessageDialogAtoms({super.key, required this.index});
+class MessageDialogAtoms extends AtomWidget {
+  const MessageDialogAtoms(
+      {super.key, super.padding, super.margin, required this.index});
   final int index;
 
   @override
-  Widget build(BuildContext context) {
+  Widget buildMaterial(BuildContext context) {
     MaterialLocalizations localizations = MaterialLocalizations.of(context);
     final List<Widget> actions = [
       ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
         child: Text(localizations.okButtonLabel),
         onPressed: () => Navigator.pop<bool>(context, true),
       ),
       ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
         child: Text(localizations.cancelButtonLabel),
         onPressed: () => Navigator.pop<bool>(context, false),
       ),
