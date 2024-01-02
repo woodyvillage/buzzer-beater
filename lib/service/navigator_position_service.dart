@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class NavigatorPosition extends ChangeNotifier {
+class NavigatorPositionService extends ChangeNotifier {
   int selectedRoute = 0;
 
   void changed(int index) {

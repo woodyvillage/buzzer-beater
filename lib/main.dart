@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:buzzer_beater/const/firebase_options.dart';
 import 'package:buzzer_beater/model/data/application_database.dart';
 import 'package:buzzer_beater/model/data/dao/initial_dao.dart';
-import 'package:buzzer_beater/utility/navigator_position.dart';
+import 'package:buzzer_beater/service/navigator_position_service.dart';
 import 'package:buzzer_beater/view/application_root.dart';
 import 'package:buzzer_beater/view/authentication_root.dart';
 
@@ -23,7 +23,7 @@ Future<void> main() async {
       : const AuthenticationRoot();
 
   runApp(ChangeNotifierProvider(
-    create: (_) => NavigatorPosition(),
+    create: (_) => NavigatorPositionService(),
     child: root,
   ));
 }

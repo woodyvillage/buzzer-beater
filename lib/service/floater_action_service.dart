@@ -5,7 +5,7 @@ import 'package:buzzer_beater/view/application/contents/roster/roster_form.dart'
 import 'package:buzzer_beater/view/application/contents/team/team_form.dart';
 import 'package:buzzer_beater/const/application_const.dart';
 
-class FloaterAction {
+class FloaterActionService {
   static dispatch(BuildContext context, int index) {
     MaterialPageRoute route = MaterialPageRoute(
       builder: (context) => const TeamForm(edit: false),

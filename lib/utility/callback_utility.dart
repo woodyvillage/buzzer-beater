@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:buzzer_beater/const/configuration_const.dart';
 import 'package:buzzer_beater/model/data/application_database.dart';
-import 'package:buzzer_beater/service/authentication_service.dart';
 import 'package:buzzer_beater/service/dialog_service.dart';
+import 'package:buzzer_beater/utility/authentication_utility.dart';
 import 'package:buzzer_beater/view/authentication_root.dart';
 
 VoidCallback makeCallback(BuildContext context, int index) {
@@ -34,8 +34,8 @@ VoidCallback makeButtonCallback(BuildContext context, int index) {
   switch (settingsLists[index][settingIndex]) {
     case '901':
       return () async {
-        bool isAllowed =
-            await showMessageDialog(context: context, index: index);
+        bool isAllowed = await DialogService.showMessageDialog(
+            context: context, index: index);
         if (isAllowed) {
           // イニシャルテーブルの認証データを削除
           resetUserAuthentication();
@@ -47,8 +47,8 @@ VoidCallback makeButtonCallback(BuildContext context, int index) {
       };
     case '902':
       return () async {
-        bool isAllowed =
-            await showMessageDialog(context: context, index: index);
+        bool isAllowed = await DialogService.showMessageDialog(
+            context: context, index: index);
         if (isAllowed) {
           // ローカルDBを削除
           ApplicationDatabase.finalize();

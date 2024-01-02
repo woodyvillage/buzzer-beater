@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:buzzer_beater/utility/navigator_position.dart';
 import 'package:buzzer_beater/const/application_const.dart';
+import 'package:buzzer_beater/service/navigator_position_service.dart';
 
 class ApplicationContents extends StatefulWidget {
   const ApplicationContents({super.key});
@@ -20,7 +20,7 @@ class _ApplicationContentsState extends State<ApplicationContents> {
       setState(() {
         // BottomNavigationBarItemの更新を促す
         context
-            .read<NavigatorPosition>()
+            .read<NavigatorPositionService>()
             .changed(contentsController.page?.round() ?? 0);
       });
     });

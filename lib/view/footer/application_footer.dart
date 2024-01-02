@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:buzzer_beater/utility/navigator_position.dart';
 import 'package:buzzer_beater/const/application_const.dart';
+import 'package:buzzer_beater/service/navigator_position_service.dart';
 
 class ApplicationFooter extends StatefulWidget {
   const ApplicationFooter({super.key});
@@ -27,7 +27,8 @@ class _ApplicationFooterState extends State<ApplicationFooter> {
   void onItemTapped(int index) {
     setState(() {
       // BottomNavigationBarItemの更新を促す
-      Provider.of<NavigatorPosition>(context, listen: false).changed(index);
+      Provider.of<NavigatorPositionService>(context, listen: false)
+          .changed(index);
       contentsController.animateToPage(index,
           duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
     });
@@ -40,7 +41,8 @@ class _ApplicationFooterState extends State<ApplicationFooter> {
       selectedItemColor: Theme.of(context).primaryColorDark,
       items: bottomNavigationBarItems,
       // selectedRouteの現在値をcurrentとする
-      currentIndex: Provider.of<NavigatorPosition>(context).selectedRoute,
+      currentIndex:
+          Provider.of<NavigatorPositionService>(context).selectedRoute,
       onTap: onItemTapped,
     );
   }

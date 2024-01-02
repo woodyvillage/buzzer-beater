@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:buzzer_beater/const/database_const.dart';
-import 'package:buzzer_beater/model/data/dto/initial_dto.dart';
 import 'package:buzzer_beater/model/data/application_database.dart';
+import 'package:buzzer_beater/model/data/dto/initial_dto.dart';
 
 abstract class BaseDao {
   Future<int?> count(dynamic dto) async {

@@ -10,10 +10,10 @@ class ListviewButtonAtoms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(settingsLists[index][settingCaption]!),
+      title: Text(settingsLists[index][settingCaption]),
       trailing: OutlinedButton(
         onPressed: callback,
-        child: Text(settingsLists[index][settingAction]!),
+        child: Text(settingsLists[index][settingAction]),
       ),
     );
   }

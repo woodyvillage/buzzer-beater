@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:buzzer_beater/utility/floater_action.dart';
-import 'package:buzzer_beater/utility/navigator_position.dart';
 import 'package:buzzer_beater/const/application_const.dart';
+import 'package:buzzer_beater/service/floater_action_service.dart';
+import 'package:buzzer_beater/service/navigator_position_service.dart';
 
 class ApplicationFloater extends StatefulWidget {
   const ApplicationFloater({super.key});
@@ -21,7 +21,7 @@ class _ApplicationFloaterState extends State<ApplicationFloater> {
 
   @override
   Widget build(BuildContext context) {
-    var index = Provider.of<NavigatorPosition>(context).selectedRoute;
+    var index = Provider.of<NavigatorPositionService>(context).selectedRoute;
     if (floaterClasses[index] == null) {
       return Container();
     } else {
@@ -30,7 +30,7 @@ class _ApplicationFloaterState extends State<ApplicationFloater> {
         icon: floaterIcon[index],
         label: Text(floaterText[index]!),
         onPressed: () {
-          FloaterAction.dispatch(context, index);
+          FloaterActionService.dispatch(context, index);
         },
       );
     }
