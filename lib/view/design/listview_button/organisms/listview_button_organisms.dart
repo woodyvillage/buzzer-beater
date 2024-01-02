@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/design/listview_button_item/atoms/listview_button_atoms.dart';
+import 'package:buzzer_beater/view/design/listview_button/atoms/listview_button_atoms.dart';
 
 class ListviewButtonOrganims extends StatefulWidget {
   const ListviewButtonOrganims(
