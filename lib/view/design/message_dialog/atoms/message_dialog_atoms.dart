@@ -31,6 +31,9 @@ class MessageDialogAtoms extends AtomWidget {
       ),
     ];
     final AlertDialog dialog = AlertDialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(5),
+      ),
       title: Text(settingsLists[index][settingAction]),
       content: Text(settingsLists[index][settingConfirm]),
       actions: actions,

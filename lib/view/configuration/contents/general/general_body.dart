@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:buzzer_beater/const/configuration_const.dart';
-import 'package:buzzer_beater/view/configuration/contents/widget/configuration_item.dart';
+import 'package:buzzer_beater/view/design/configuration_item/organisms/configuration_item_organisms.dart';
 
 class GeneralBody extends StatelessWidget {
   const GeneralBody({super.key});
@@ -14,7 +14,7 @@ class GeneralBody extends StatelessWidget {
         child: ListView.builder(
           itemCount: settingsLists.length,
           itemBuilder: (context, index) {
-            return ConfigurationItem(index: index);
+            return ConfigurationItemOrganisms(index: index);
           },
         ),
       ),
