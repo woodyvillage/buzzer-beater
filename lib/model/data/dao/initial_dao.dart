@@ -7,7 +7,7 @@ class InitialDao extends BaseDao {
     InitialDto dto = InitialDto(provider: "", registed: "");
     int? result = await count(dto);
     if (kDebugMode) {
-      print('isAuthorized => $result');
+      print('isAuthorized => ${result == 0 ? false : true}');
     }
 
     return result == null

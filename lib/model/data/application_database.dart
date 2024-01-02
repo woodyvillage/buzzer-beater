@@ -31,6 +31,9 @@ class ApplicationDatabase {
 
   static Future<void> finalize() async {
     Directory directory = await getApplicationSupportDirectory();
+    if (kDebugMode) {
+      print('delete database');
+    }
     return await deleteDatabase(
       join(directory.path, DatabaseConst.databaseName),
     );

@@ -46,6 +46,8 @@ dependencies:
   # firebase
   firebase_core: ^2.24.2
   firebase_auth: ^4.15.0
+  firebase_ui_auth: ^1.10.0
+  firebase_ui_localizations: ^1.2.0
 
   # SQLite
   sqflite: ^2.2.0
