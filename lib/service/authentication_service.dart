@@ -20,3 +20,22 @@ Future setUserAuthentication(String provider, String registed) async {
     }
   }
 }
+
+Future resetUserAuthentication() async {
+  try {
+    if (kDebugMode) {
+      print('resetUserAuthentication');
+    }
+    // イニシャルテーブル
+    InitialDao dao = InitialDao();
+    InitialDto dto = InitialDto(
+      provider: "",
+      registed: "",
+    );
+    await dao.delete(dto);
+  } catch (e) {
+    if (kDebugMode) {
+      print(e.toString());
+    }
+  }
+}

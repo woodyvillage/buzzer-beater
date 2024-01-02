@@ -28,6 +28,17 @@ abstract class BaseDao {
     );
   }
 
+  Future<int> delete(dynamic dto) async {
+    Database database = await ApplicationDatabase.database;
+    if (kDebugMode) {
+      print(
+          '${scope(dto)} delete[${DatabaseConst.columnProvider} = ${dto.provider}]');
+    }
+    return await database.delete(
+      scope(dto),
+    );
+  }
+
   String scope(dynamic dto) {
     if (dto is InitialDto) {
       return DatabaseConst.tableInitial;

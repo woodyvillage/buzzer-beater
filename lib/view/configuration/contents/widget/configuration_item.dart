@@ -1,6 +1,7 @@
-import 'package:buzzer_beater/const/configuration_const.dart';
-import 'package:buzzer_beater/view/design/listview_button_item/organisms/listview_button_organisms.dart';
 import 'package:flutter/material.dart';
+import 'package:buzzer_beater/const/configuration_const.dart';
+import 'package:buzzer_beater/service/callback_service.dart';
+import 'package:buzzer_beater/view/design/listview_button_item/organisms/listview_button_organisms.dart';
 
 class ConfigurationItem extends StatelessWidget {
   const ConfigurationItem({super.key, required this.index});
@@ -13,6 +14,7 @@ class ConfigurationItem extends StatelessWidget {
       case patternButton:
         item = ListviewButtonOrganims(
           index: index,
+          callback: makeCallback(context, index),
         );
         break;
       default:
