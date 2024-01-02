@@ -1,6 +1,6 @@
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/service/authentication_service.dart';
+import 'package:buzzer_beater/utility/authentication_utility.dart';
 import 'package:buzzer_beater/view/application_root.dart';
 
 class AuthenticationContents extends StatefulWidget {
