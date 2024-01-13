@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:buzzer_beater/const/application_const.dart';
+import 'package:buzzer_beater/const/routing_const.dart';
 import 'package:buzzer_beater/service/navigator_position_service.dart';
 
 class ApplicationContents extends StatefulWidget {

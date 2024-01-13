@@ -14,7 +14,7 @@ VoidCallback makeCallback(BuildContext context, int index) {
 
   // settingTypeでの分別
   VoidCallback callback;
-  switch (settingsLists[index][settingType]) {
+  switch (settingsLists[index][indexType]) {
     case patternButton:
       callback = makeButtonCallback(context, index);
       break;
@@ -31,7 +31,7 @@ VoidCallback makeButtonCallback(BuildContext context, int index) {
   }
 
   // settingIndex別のコールバック定義
-  switch (settingsLists[index][settingIndex]) {
+  switch (settingsLists[index][indexKey]) {
     case '901':
       return () async {
         bool isAllowed = await DialogService.showMessageDialog(

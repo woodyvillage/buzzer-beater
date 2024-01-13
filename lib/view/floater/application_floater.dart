@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:buzzer_beater/const/application_const.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:buzzer_beater/const/routing_const.dart';
 import 'package:buzzer_beater/service/floater_action_service.dart';
 import 'package:buzzer_beater/service/navigator_position_service.dart';
 
@@ -29,7 +30,7 @@ class _ApplicationFloaterState extends State<ApplicationFloater> {
         backgroundColor: Theme.of(context).primaryColorDark,
         foregroundColor: Colors.white,
         icon: floaterIcon[index],
-        label: Text(floaterText[index]!),
+        label: Text(AppLocalizations.of(context)!.floater(floaterText[index])),
         onPressed: () {
           FloaterActionService.dispatch(context, index);
         },

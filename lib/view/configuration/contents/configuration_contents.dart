@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/const/configuration_const.dart';
+import 'package:buzzer_beater/const/routing_const.dart';
 
 class ConfigurationContents extends StatefulWidget {
   const ConfigurationContents({super.key});

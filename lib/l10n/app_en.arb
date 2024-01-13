@@ -1,6 +1,13 @@
 {
   "@@locale": "en",
 
+  "contents": "{index, select, TEAM{チーム} MEMBER{メンバー} ROSTER{ロースター} MATCH{試合} RESULT{成績} other{}}",
+  "floater": "{index, select, ADD{Add} PLAY{Play} other{}}",
+
+  "logout": "{index, select, LOGOUT{Logout} LOGOUT_DISP{1qaz} LOGOUT_DESC{abcde} other{}}",
+  "initialize": "{index, select, INITIALIZE{Initialize} INITIALIZE_DISP{jhsfh} INITIALIZE_DESC{gogo} other{}}",
+
   "applicationTitle": "buzzer beater",
-  "applicationSettingTitle": "settings"
+  "applicationSettingTitle": "settings",
+  "applicationProvider": "woodyvillage.com"
 }

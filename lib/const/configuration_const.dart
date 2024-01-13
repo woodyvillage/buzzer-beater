@@ -1,30 +1,22 @@
-import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/configuration/contents/general/general_body.dart';
+// =============================================================================
+// 定数
+// =============================================================================
+const int indexGeneral = 0;
 
-final PageController settingsController = PageController(
-  initialPage: 0,
-  viewportFraction: 1.0,
-);
+const String settingsGeneral = 'GENERAL';
 
-final settingsClasses = [
-  const GeneralBody(),
-];
+const int indexType = 0;
+const int indexKey = 1;
+const int indexName = 2;
+const int indexHeadline = 3;
+const int indexDescription = 4;
 
-final settingsIcons = [
-  const Icon(Icons.home),
-];
+const String patternButton = 'BTN';
 
-final settingsTexts = ["全般"];
-
-const patternButton = 'BTN';
-
-const settingType = 0;
-const settingIndex = 1;
-const settingCaption = 2;
-const settingAction = 3;
-const settingConfirm = 4;
-
+// =============================================================================
+// コンフィグ項目
+// =============================================================================
 final settingsLists = [
-  [patternButton, '901', 'ログアウト', 'ログアウト', 'ログアウトします'],
-  [patternButton, '902', 'アプリを初期状態に戻す', '初期化', 'すべてのユーザーデータを消去して初期状態にします'],
+  [patternButton, '901', 'LOGOUT', 'LOGOUT_DISP', 'LOGOUT_DESC'],
+  [patternButton, '902', 'INITIALIZE', 'INITIALIZE_DISP', 'INITIALIZE_DESC'],
 ];
