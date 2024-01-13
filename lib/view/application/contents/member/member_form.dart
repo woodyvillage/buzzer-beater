@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/view/application/contents/widget/command_widget.dart';
 import 'package:buzzer_beater/const/application_const.dart';
+import 'package:buzzer_beater/const/routing_const.dart';
+import 'package:buzzer_beater/model/form/dto/form_item_dto.dart';
+import 'package:buzzer_beater/view/application/contents/team/team_form_implement.dart';
+import 'package:buzzer_beater/view/design/command_button/organisms/command_button_organisms.dart';
 
 class MemberForm extends StatefulWidget {
   const MemberForm({super.key, required this.edit});
@@ -11,12 +14,22 @@ class MemberForm extends StatefulWidget {
 }
 
 class _MemberFormState extends State<MemberForm> {
+  List<FormItemDto> items = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    // CommandButtonオブジェクトの埋め込み
+    items = implementCommandButton(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Text(floaterText[floaterMember]!),
+        title: Text(floaterText[indexMember]),
       ),
       body: GestureDetector(
         onTap: () {
@@ -25,13 +38,7 @@ class _MemberFormState extends State<MemberForm> {
         child: ListView(
           children: <Widget>[
             const Padding(padding: EdgeInsets.symmetric(vertical: 15)),
-            // teamImageField(),
-            // teamColorField(_form[1]),
-            // teamColorField(_form[2]),
-            // teamOwnerField(_form[3]),
-            // teamSupportField(_form[4]),
-            // Padding(padding: const EdgeInsets.symmetric(vertical: 10)),
-            CommandWidget.build(context, widget.edit),
+            CommandButtonOrganisms(items: items),
           ],
         ),
       ),
