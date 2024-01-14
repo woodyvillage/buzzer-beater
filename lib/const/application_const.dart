@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:buzzer_beater/const/common_const.dart';
 
 // =============================================================================
