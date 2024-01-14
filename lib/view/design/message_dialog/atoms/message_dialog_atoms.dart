@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:buzzer_beater/const/configuration_const.dart';
 import 'package:buzzer_beater/view/design/wrapper/atoms_widget.dart';
 
@@ -34,8 +35,10 @@ class MessageDialogAtoms extends AtomWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
       ),
-      title: Text(settingsLists[index][settingAction]),
-      content: Text(settingsLists[index][settingConfirm]),
+      title: Text(AppLocalizations.of(context)!
+          .configure_DISP(settingsLists[index][indexKey])),
+      content: Text(AppLocalizations.of(context)!
+          .configure_DESC(settingsLists[index][indexKey])),
       actions: actions,
     );
 

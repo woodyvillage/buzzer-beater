@@ -7,9 +7,7 @@ const String settingsGeneral = 'GENERAL';
 
 const int indexType = 0;
 const int indexKey = 1;
-const int indexName = 2;
-const int indexHeadline = 3;
-const int indexDescription = 4;
+const int indexSetting = 2;
 
 const String patternButton = 'BTN';
 
@@ -17,6 +15,6 @@ const String patternButton = 'BTN';
 // コンフィグ項目
 // =============================================================================
 final settingsLists = [
-  [patternButton, '901', 'LOGOUT', 'LOGOUT_DISP', 'LOGOUT_DESC'],
-  [patternButton, '902', 'INITIALIZE', 'INITIALIZE_DISP', 'INITIALIZE_DESC'],
+  [patternButton, 'A01', 'LOGOUT'],
+  [patternButton, 'A02', 'INITIALIZE'],
 ];

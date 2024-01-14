@@ -4,8 +4,8 @@
   "contents": "{index, select, TEAM{チーム} MEMBER{メンバー} ROSTER{ロースター} MATCH{試合} RESULT{成績} other{}}",
   "floater": "{index, select, ADD{追加} PLAY{開始} other{}}",
 
-  "logout": "{index, select, LOGOUT{ログアウト} LOGOUT_DISP{ログアウト} LOGOUT_DESC{ログアウトします} other{}}",
-  "initialize": "{index, select, INITIALIZE{初期化} INITIALIZE_DISP{初期化します} INITIALIZE_DESC{初期化します} other{}}",
+  "configure_DISP": "{index, select, A01{ログアウト} A02{初期化} other{}}",
+  "configure_DESC": "{index, select, A01{ログアウトする} A02{端末内のデータを初期化する} other{}}",
 
   "applicationTitle": "ミニバススコアブック",
   "applicationSettingTitle": "設定画面",

@@ -32,7 +32,7 @@ VoidCallback makeButtonCallback(BuildContext context, int index) {
 
   // settingIndex別のコールバック定義
   switch (settingsLists[index][indexKey]) {
-    case '901':
+    case 'A01':
       return () async {
         bool isAllowed = await DialogService.showMessageDialog(
             context: context, index: index);
@@ -45,7 +45,7 @@ VoidCallback makeButtonCallback(BuildContext context, int index) {
           }));
         }
       };
-    case '902':
+    case 'A02':
       return () async {
         bool isAllowed = await DialogService.showMessageDialog(
             context: context, index: index);

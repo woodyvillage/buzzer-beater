@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:buzzer_beater/const/configuration_const.dart';
 import 'package:buzzer_beater/view/design/wrapper/atoms_widget.dart';
 
@@ -15,7 +16,8 @@ class ListviewButtonAtoms extends AtomWidget {
   @override
   Widget buildMaterial(BuildContext context) {
     return ListTile(
-      title: Text(settingsLists[index][settingCaption]),
+      title: Text(AppLocalizations.of(context)!
+          .configure_DESC(settingsLists[index][indexKey])),
       trailing: SizedBox(
         width: 120,
         child: OutlinedButton(
@@ -25,7 +27,8 @@ class ListviewButtonAtoms extends AtomWidget {
             ),
           ),
           onPressed: callback,
-          child: Text(settingsLists[index][settingAction]),
+          child: Text(AppLocalizations.of(context)!
+              .configure_DISP(settingsLists[index][indexKey])),
         ),
       ),
     );
