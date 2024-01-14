@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:buzzer_beater/const/configuration_const.dart';
-import 'package:buzzer_beater/view/design/configuration_item/organisms/configuration_item_organisms.dart';
+import 'package:buzzer_beater/view/design/configuration_item/configuration_item_organisms.dart';
 
 class GeneralBody extends StatelessWidget {
   const GeneralBody({super.key});

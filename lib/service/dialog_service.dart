@@ -1,5 +1,5 @@
-import 'package:buzzer_beater/view/design/message_dialog/atoms/message_dialog_atoms.dart';
 import 'package:flutter/material.dart';
+import 'package:buzzer_beater/view/design/widget/atoms/dialog/message_dialog_atoms.dart';
 
 class DialogService {
   static Future showMessageDialog({
