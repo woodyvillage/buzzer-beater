@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/model/form/dto/form_item_dto.dart';
+import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
 import 'package:buzzer_beater/view/design/wrapper/atoms_widget.dart';
 
 class CommandButtonAtoms extends AtomWidget {
-  const CommandButtonAtoms({super.key, required this.item});
-  final FormItemDto item;
+  const CommandButtonAtoms({
+    super.key,
+    required this.item,
+  });
+  final FormButtonDto item;
 
   @override
   Widget buildMaterial(BuildContext context) {

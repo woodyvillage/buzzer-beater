@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:buzzer_beater/const/application_const.dart';
 import 'package:buzzer_beater/const/routing_const.dart';
-import 'package:buzzer_beater/model/form/dto/form_item_dto.dart';
+import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
 import 'package:buzzer_beater/view/application/contents/team/team_form_implement.dart';
-import 'package:buzzer_beater/view/design/command_button/organisms/command_button_organisms.dart';
+import 'package:buzzer_beater/view/design/command_button/command_button_organisms.dart';
 
 class MemberForm extends StatefulWidget {
   const MemberForm({super.key, required this.edit});
@@ -14,7 +14,7 @@ class MemberForm extends StatefulWidget {
 }
 
 class _MemberFormState extends State<MemberForm> {
-  List<FormItemDto> items = [];
+  List<FormButtonDto> items = [];
 
   @override
   void initState() {

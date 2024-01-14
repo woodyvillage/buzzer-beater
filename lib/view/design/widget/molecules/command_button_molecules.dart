@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/model/form/dto/form_item_dto.dart';
-import 'package:buzzer_beater/view/design/command_button/atoms/command_button_atoms.dart';
-import 'package:buzzer_beater/view/design/command_button/atoms/separator_atoms.dart';
+import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
+import 'package:buzzer_beater/view/design/widget/atoms/button/command_button_atoms.dart';
+import 'package:buzzer_beater/view/design/widget/atoms/padding/separator_atoms.dart';
 import 'package:buzzer_beater/view/design/wrapper/molecules_widget.dart';
 
 class CommandButtonMolecules extends MoleculeWidget {
@@ -9,7 +9,7 @@ class CommandButtonMolecules extends MoleculeWidget {
     super.key,
     required this.items,
   });
-  final List<FormItemDto> items;
+  final List<FormButtonDto> items;
 
   @override
   Widget buildMolecule(final BuildContext context) {
