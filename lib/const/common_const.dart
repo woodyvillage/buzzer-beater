@@ -1,16 +1,16 @@
-import 'package:buzzer_beater/const/common_const.dart';
-
 // =============================================================================
 // 定数
 // =============================================================================
-const int indexGeneral = 0;
-
-const String settingsGeneral = 'GENERAL';
+// 共通部分
+const int indexType = 0;
+const int indexKey = 1;
+// アプリケーション系
+const int indexKeyboard = 2;
+// コンフィグ系
+const int indexSetting = 2;
 
 // =============================================================================
-// コンフィグ項目
+// コントロールの識別子
 // =============================================================================
-final settingsLists = [
-  [patternButton, 'A01', 'LOGOUT'],
-  [patternButton, 'A02', 'INITIALIZE'],
-];
+const String patternButton = 'BTN';
+const String patternField = 'FLD';

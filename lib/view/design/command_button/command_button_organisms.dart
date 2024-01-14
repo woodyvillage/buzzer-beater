@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:buzzer_beater/const/general_const.dart';
+import 'package:buzzer_beater/const/widget_const.dart';
 import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
 import 'package:buzzer_beater/view/design/widget/molecules/command_button_molecules.dart';
 

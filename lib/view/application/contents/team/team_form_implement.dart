@@ -1,31 +1,40 @@
-import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
 import 'package:flutter/material.dart';
-import 'package:buzzer_beater/const/general_const.dart';
-import 'package:buzzer_beater/model/form/dto/form_list_dto.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:buzzer_beater/const/application_const.dart';
+import 'package:buzzer_beater/const/common_const.dart';
+import 'package:buzzer_beater/const/widget_const.dart';
+import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
+import 'package:buzzer_beater/model/form/dto/form_field_dto.dart';
 
-// List<FormItemDto> implementPictureView(BuildContext context) {
-//   List<FormItemDto> items = [];
+FormFieldDto implementInputField(BuildContext context, int index) {
+  return FormFieldDto(
+    index: teamFormItem[index][indexType],
+    caption: implementCaption(context, index, 'caption'),
+    hint: implementCaption(context, index, 'hint'),
+    keytype: implementKeytype(teamFormItem[index][indexKeyboard]),
+  );
+}
 
-//   var dto = FormItemDto(
-//     index: functionTeamImage,
-//     height: 200,
-//     width: 200,
-//     callback: () {
-//       Navigator.pop(context);
-//     },
-//   );
-//   items.add(dto);
-//   dto = FormItemDto(
-//     index: functionTeamButton,
-//     height: 100,
-//     width: 100,
-//     callback: () {
-//       Navigator.pop(context);
-//     },
-//   );
-//   items.add(dto);
-//   return items;
-// }
+String implementCaption(BuildContext context, int index, String subitem) {
+  String caption;
+  switch (index) {
+    case indexTeamName:
+      caption = AppLocalizations.of(context)!.team_name(subitem);
+      break;
+    default:
+      caption = "";
+  }
+  return caption;
+}
+
+TextInputType implementKeytype(String type) {
+  switch (type) {
+    case 'text':
+      return TextInputType.text;
+    default:
+      return TextInputType.text;
+  }
+}
 
 List<FormButtonDto> implementCommandButton(BuildContext context) {
   List<FormButtonDto> items = [];

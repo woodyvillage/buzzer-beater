@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:buzzer_beater/const/common_const.dart';
 import 'package:buzzer_beater/const/configuration_const.dart';
 import 'package:buzzer_beater/view/design/wrapper/atoms_widget.dart';
 
