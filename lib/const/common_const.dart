@@ -14,3 +14,4 @@ const int indexSetting = 2;
 // =============================================================================
 const String patternButton = 'BTN';
 const String patternField = 'FLD';
+const String patternPicture = 'PCT';

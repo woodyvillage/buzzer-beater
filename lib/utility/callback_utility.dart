@@ -2,22 +2,21 @@ import 'dart:ffi';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:buzzer_beater/const/common_const.dart';
-import 'package:buzzer_beater/const/configuration_const.dart';
 import 'package:buzzer_beater/model/data/application_database.dart';
 import 'package:buzzer_beater/service/dialog_service.dart';
 import 'package:buzzer_beater/utility/authentication_utility.dart';
 import 'package:buzzer_beater/view/authentication_root.dart';
 
-VoidCallback makeCallback(BuildContext context, int index) {
+VoidCallback makeCallback(
+    BuildContext context, int index, List<List<String>> list) {
   if (kDebugMode) {
     print('makeCallback[$index]');
   }
 
-  // settingTypeでの分別
   VoidCallback callback;
-  switch (settingsLists[index][indexType]) {
+  switch (list[index][indexType]) {
     case patternButton:
-      callback = makeButtonCallback(context, index);
+      callback = makeButtonCallback(context, index, list[index][indexKey]);
       break;
     default:
       callback = Void as VoidCallback;
@@ -26,13 +25,12 @@ VoidCallback makeCallback(BuildContext context, int index) {
   return callback;
 }
 
-VoidCallback makeButtonCallback(BuildContext context, int index) {
+VoidCallback makeButtonCallback(BuildContext context, int index, String key) {
   if (kDebugMode) {
-    print('makeButtonCallback[$index]');
+    print('makeButtonCallback[$key]');
   }
 
-  // settingIndex別のコールバック定義
-  switch (settingsLists[index][indexKey]) {
+  switch (key) {
     case 'A01':
       return () async {
         bool isAllowed = await DialogService.showMessageDialog(

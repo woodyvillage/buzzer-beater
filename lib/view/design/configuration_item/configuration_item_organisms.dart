@@ -24,7 +24,7 @@ class _ConfigurationItemOrganismsState
   FormListDto buildDto() {
     return FormListDto(
       index: settingsLists[widget.index][indexType],
-      callback: makeCallback(context, widget.index),
+      callback: makeCallback(context, widget.index, settingsLists),
       caption: Text(AppLocalizations.of(context)!
           .configure_DESC(settingsLists[widget.index][indexKey])),
       command: Text(AppLocalizations.of(context)!

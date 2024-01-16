@@ -55,6 +55,9 @@ dependencies:
   path: ^1.8.3
   path_provider: ^2.1.1
 
+  # ImagePicker
+  image_picker: ^0.8.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -80,6 +83,8 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - images/noimage.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

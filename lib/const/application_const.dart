@@ -24,8 +24,10 @@ const String floaterResult = '';
 // =============================================================================
 // チーム画面入力項目
 // =============================================================================
-const indexTeamName = 0;
+const indexTeamImage = 0;
+const indexTeamName = 1;
 final teamFormItem = [
-  [patternField, 'TM01', 'text', 'TEAMNAME1'],
-  [patternField, 'TM02', 'text', 'TEAMNAME2'],
+  [patternPicture, 'TM01', '', 'TEAMIMAGE'],
+  [patternField, 'TM02', 'text', 'TEAMNAME1'],
+  [patternField, 'TM03', 'text', 'TEAMNAME2'],
 ];

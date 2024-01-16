@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:buzzer_beater/const/routing_const.dart';
 import 'package:buzzer_beater/const/application_const.dart';
-import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
+import 'package:buzzer_beater/model/page/dto/team_page_dto.dart';
 import 'package:buzzer_beater/view/application/contents/team/team_form_implement.dart';
 import 'package:buzzer_beater/view/design/command_button/command_button_organisms.dart';
 import 'package:buzzer_beater/view/design/input_field/input_field_organisms.dart';
+import 'package:buzzer_beater/view/design/picture_picker/picture_picker_organisms.dart';
 
 class TeamForm extends StatefulWidget {
   const TeamForm({super.key, required this.edit});
@@ -16,14 +17,19 @@ class TeamForm extends StatefulWidget {
 }
 
 class _TeamFormState extends State<TeamForm> {
-  List<FormButtonDto> commands = [];
+  TeamPageDto? pages;
 
   @override
   void initState() {
     super.initState();
+  }
 
-    // CommandButtonオブジェクトの埋め込み
-    commands = implementCommandButton(context);
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    // ページDTO
+    pages = implementPageDto(context);
   }
 
   @override
@@ -40,10 +46,11 @@ class _TeamFormState extends State<TeamForm> {
         },
         child: ListView(
           children: <Widget>[
-            InputFieldOrganisms(
-                item: implementInputField(context, indexTeamName)),
+            PicturePickerOrganisms(picture: pages!.image!),
+            const Padding(padding: EdgeInsets.symmetric(vertical: 5)),
+            InputFieldOrganisms(item: pages!.name!),
             const Padding(padding: EdgeInsets.symmetric(vertical: 10)),
-            CommandButtonOrganisms(items: commands),
+            CommandButtonOrganisms(items: pages!.command),
           ],
         ),
       ),
