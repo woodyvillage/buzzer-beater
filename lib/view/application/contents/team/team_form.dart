@@ -20,20 +20,8 @@ class _TeamFormState extends State<TeamForm> {
   TeamPageDto? pages;
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    // ページDTO
-    pages = implementPageDto(context);
-  }
-
-  @override
   Widget build(BuildContext context) {
+    pages = implementPageDto(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
@@ -49,6 +37,8 @@ class _TeamFormState extends State<TeamForm> {
             PicturePickerOrganisms(picture: pages!.image!),
             const Padding(padding: EdgeInsets.symmetric(vertical: 5)),
             InputFieldOrganisms(item: pages!.name!),
+            const Padding(padding: EdgeInsets.symmetric(vertical: 5)),
+            InputFieldOrganisms(item: pages!.slogan!),
             const Padding(padding: EdgeInsets.symmetric(vertical: 10)),
             CommandButtonOrganisms(items: pages!.command),
           ],

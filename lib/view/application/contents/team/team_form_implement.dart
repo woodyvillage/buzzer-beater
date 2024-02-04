@@ -14,8 +14,11 @@ TeamPageDto implementPageDto(BuildContext context) {
   page.image = implementPicture(context, indexTeamImage);
   // チーム名
   page.name = implementInputField(context, indexTeamName);
+  // スローガン
+  page.slogan = implementInputField(context, indexTeamSlogan);
   // コマンドボタン
   page.command = implementCommandButton(context);
+
   return page;
 }
 
@@ -56,6 +59,9 @@ String getCaption(BuildContext context, int index, String subitem) {
     case indexTeamName:
       caption = AppLocalizations.of(context)!.team_name(subitem);
       break;
+    case indexTeamSlogan:
+      caption = AppLocalizations.of(context)!.team_slogan(subitem);
+      break;
     default:
       caption = "";
   }
@@ -76,5 +82,9 @@ FormPictureDto implementPicture(BuildContext context, int index) {
     index: teamFormItem[index][indexType],
     height: 200,
     width: MediaQuery.of(context).size.width - 20,
+    image: Image.asset(
+      'images/noimage.png',
+      fit: BoxFit.fitHeight,
+    ),
   );
 }
