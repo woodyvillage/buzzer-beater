@@ -1,10 +1,10 @@
-import 'dart:io';
 import 'package:buzzer_beater/model/form/dto/abstract/base_form_dto.dart';
+import 'package:flutter/material.dart';
 
 class FormPictureDto extends BaseFormDto {
   double? height;
   double? width;
-  File? image;
+  Image? image;
 
   FormPictureDto({
     required super.index,

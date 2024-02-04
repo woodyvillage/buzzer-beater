@@ -14,15 +14,7 @@ class PictureWindowAtoms extends AtomWidget {
     return SizedBox(
       height: picture.height,
       width: picture.width,
-      child: picture.image != null
-          ? Image.file(
-              picture.image!,
-              fit: BoxFit.cover,
-            )
-          : Image.asset(
-              'images/noimage.png',
-              fit: BoxFit.fitHeight,
-            ),
+      child: picture.image!,
     );
   }
 }

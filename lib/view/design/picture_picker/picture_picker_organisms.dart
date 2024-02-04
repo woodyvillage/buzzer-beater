@@ -18,7 +18,10 @@ class _PicturePickerOrganismsState extends State<PicturePickerOrganisms> {
   Future pick() async {
     var image = await _picker.pickImage(source: ImageSource.gallery);
     setState(() {
-      widget.picture.image = File(image!.path);
+      widget.picture.image = Image.file(
+        File(image!.path),
+        fit: BoxFit.cover,
+      );
     });
   }
 
@@ -27,6 +30,7 @@ class _PicturePickerOrganismsState extends State<PicturePickerOrganisms> {
     widget.picture.callback = () {
       pick();
     };
+
     return PicturePickerMolecules(
       picture: widget.picture,
     );
