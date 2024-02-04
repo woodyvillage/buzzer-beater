@@ -22,6 +22,7 @@ class _ApplicationFloaterState extends State<ApplicationFloater> {
 
   @override
   Widget build(BuildContext context) {
+    // ChangeNotifierProviderの通知を見ている
     var index = Provider.of<NavigatorPositionService>(context).selectedRoute;
     if (floaterClasses[index] == null) {
       return Container();

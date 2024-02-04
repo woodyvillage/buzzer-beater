@@ -26,8 +26,9 @@ const String floaterResult = '';
 // =============================================================================
 const indexTeamImage = 0;
 const indexTeamName = 1;
+const indexTeamSlogan = 2;
 final teamFormItem = [
-  [patternPicture, 'TM01', '', 'TEAMIMAGE'],
-  [patternField, 'TM02', 'text', 'TEAMNAME1'],
-  [patternField, 'TM03', 'text', 'TEAMNAME2'],
+  [patternPicture, 'TM01', '', 'IMAGE'],
+  [patternField, 'TM02', 'text', 'NAME'],
+  [patternField, 'TM03', 'text', 'SLOGAN'],
 ];

@@ -7,6 +7,7 @@
   "command_button": "{index, select, SUBMIT{決定} CANCEL{戻る} DELETE{削除} other{}}",
 
   "team_name": "{index, select, caption{チーム名} hint{チーム名を入力します} other{}}",
+  "team_slogan": "{index, select, caption{スローガン} hint{スローガンを入力します} other{}}",
 
   "configure_DISP": "{index, select, A01{ログアウト} A02{初期化} other{}}",
   "configure_DESC": "{index, select, A01{ログアウトする} A02{端末内のデータを初期化する} other{}}",

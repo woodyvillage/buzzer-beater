@@ -22,8 +22,12 @@ Future<void> main() async {
       ? const ApplicationRoot()
       : const AuthenticationRoot();
 
-  runApp(ChangeNotifierProvider(
-    create: (_) => NavigatorPositionService(),
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (_) => NavigatorPositionService(),
+      ),
+    ],
     child: root,
   ));
 }

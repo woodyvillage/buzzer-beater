@@ -1,13 +1,14 @@
 {
   "@@locale": "en",
 
-  "contents": "{index, select, TEAM{チーム} MEMBER{メンバー} ROSTER{ロースター} MATCH{試合} RESULT{成績} other{}}",
-  "floater": "{index, select, TEAMADD{Team Add} ADD{追加} PLAY{Play} other{}}",
+  "contents": "{index, select, TEAM{Team} MEMBER{Member} ROSTER{Roster} MATCH{Match} RESULT{Result} other{}}",
+  "floater": "{index, select, TEAMADD{Team Add} ADD{Add} PLAY{Play} other{}}",
 
-  "command_button": "{index, select, SUBMIT{決定} CANCEL{戻る} DELETE{削除} other{}}",
+  "command_button": "{index, select, SUBMIT{Submit} CANCEL{Back} DELETE{Delete} other{}}",
 
   "team_name": "{index, select, caption{チーム名} hint{チーム名を入力します} other{}}",
-  
+  "team_slogan": "{index, select, caption{スローガン} hint{スローガンを入力します} other{}}",
+
   "configure_DISP": "{index, select, A01{ログアウト} A02{初期化} other{}}",
   "configure_DESC": "{index, select, A01{ログアウトする} A02{端末内のデータを初期化する} other{}}",
 

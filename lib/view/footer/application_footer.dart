@@ -43,6 +43,7 @@ class _ApplicationFooterState extends State<ApplicationFooter> {
       items: buildBarItem(),
       // selectedRouteの現在値をcurrentとする
       currentIndex:
+          // ChangeNotifierProviderの通知を見ている
           Provider.of<NavigatorPositionService>(context).selectedRoute,
       onTap: onItemTapped,
     );
