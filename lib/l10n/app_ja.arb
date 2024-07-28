@@ -1,0 +1,15 @@
+{
+  "@@locale": "ja",
+  
+  "contents": "{index, select, TEAM{チーム} MEMBER{メンバー} other{}}",
+
+  "cancel": "取消",
+  "submit": "確定",
+
+  "db_initialize": "端末内のデータを初期化する",
+  "init": "初期化",
+  
+  "applicationTitle": "ミニバススコアブック",
+  "applicationSettingTitle": "設定画面",
+  "applicationProvider": "woodyvillage.com"
+}

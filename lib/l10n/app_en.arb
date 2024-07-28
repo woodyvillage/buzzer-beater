@@ -1,0 +1,15 @@
+{
+  "@@locale": "en",
+  
+  "contents": "{index, select, TEAM{team} MEMBER{member} other{}}",
+
+  "cancel": "cancel",
+  "submit": "ok",
+
+  "db_initialize": "Initialize the data in the terminal",
+  "init": "Initialize",
+
+  "applicationTitle": "Buzzer Beater",
+  "applicationSettingTitle": "Settings",
+  "applicationProvider": "woodyvillage.com"
+}
