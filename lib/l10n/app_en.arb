@@ -2,6 +2,7 @@
   "@@locale": "en",
   
   "contents": "{index, select, TEAM{team} MEMBER{member} other{}}",
+  "floater": "{index, select, TEAM_ADD{add team} MEMBER_ADD{add member} other{}}",
 
   "cancel": "cancel",
   "submit": "ok",

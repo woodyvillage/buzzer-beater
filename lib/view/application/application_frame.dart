@@ -1,4 +1,6 @@
 import 'package:buzzer_beater/view/application/contents/application_contents.dart';
+import 'package:buzzer_beater/view/application/floater/application_floater.dart';
+import 'package:buzzer_beater/view/application/footer/application_footer.dart';
 import 'package:buzzer_beater/view/header/application_header.dart';
 import 'package:flutter/material.dart';
 
@@ -17,10 +19,10 @@ class _ApplicationFrameState extends State<ApplicationFrame> {
       appBar: ApplicationHeader(isView: true),
       // コンテンツ
       body: ApplicationContents(),
-      // // フローティングボタン
-      // floatingActionButton: ApplicationFloater(),
+      // フローティングボタン
+      floatingActionButton: ApplicationFloater(),
       // ナビゲーター
-      // bottomNavigationBar: ApplicationFooter(),
+      bottomNavigationBar: ApplicationFooter(),
     );
   }
 }
