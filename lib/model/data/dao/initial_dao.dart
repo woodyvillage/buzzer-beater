@@ -22,7 +22,7 @@ class InitialDao extends BaseDao<InitialDto> {
   }
 
   @override
-  String scope() => DatabaseConst.tableInitial;
+  String scope() => tableInitial;
 
   @override
   List<InitialDto> parseResult(List<Map<String, dynamic>> result) {

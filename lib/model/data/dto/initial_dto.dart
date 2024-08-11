@@ -6,10 +6,10 @@ class InitialDto {
   InitialDto({required this.no});
 
   factory InitialDto.parse(Map<String, dynamic> record) => InitialDto(
-        no: record[DatabaseConst.columnNo],
+        no: record[columnNo],
       );
 
   Map<String, dynamic> toMap() => {
-        DatabaseConst.columnNo: no,
+        columnNo: no,
       };
 }
