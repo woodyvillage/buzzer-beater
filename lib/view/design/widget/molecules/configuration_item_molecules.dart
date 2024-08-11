@@ -1,5 +1,6 @@
 import 'package:buzzer_beater/model/form/dto/config_list_dto.dart';
-import 'package:buzzer_beater/view/design/widget/atoms/list/configuration_item_atoms.dart';
+import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
+import 'package:buzzer_beater/view/design/widget/atoms/button/general_button_atoms.dart';
 import 'package:buzzer_beater/view/design/wrapper/molecules_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,23 @@ class ConfigurationItemMolecules extends MoleculeWidget {
 
   @override
   Widget buildMolecule(final BuildContext context) {
-    return ConfigurationItemAtoms(
-      item: item,
+    return ListTile(
+      title: item.caption,
+      trailing: SizedBox(
+        width: item.width,
+        child: GeneralButtonAtoms(
+          item: buildButton(item),
+        ),
+      ),
+    );
+  }
+
+  FormButtonDto buildButton(ConfigListDto item) {
+    return FormButtonDto(
+      caption: item.command,
+      foreColor: Colors.white,
+      backColor: Colors.green,
+      callback: item.callback,
     );
   }
 }

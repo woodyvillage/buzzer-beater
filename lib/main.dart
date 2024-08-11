@@ -10,9 +10,9 @@ Future<void> main() async {
 
   // ローカルDB内のアカウントテーブルをチェック
   await ApplicationDatabase.database;
-  InitialDao possession = InitialDao();
-  if (!await possession.isAuthorized()) {
-    possession.initialize();
+  InitialDao initial = InitialDao();
+  if (!await initial.isAuthorized()) {
+    initial.initialize();
   }
 
   runApp(MultiProvider(

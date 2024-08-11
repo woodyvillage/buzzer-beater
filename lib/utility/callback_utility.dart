@@ -53,16 +53,17 @@ VoidCallback makeButtonCallback(
         bool isAllowed = await DialogActionService.notification(
           context,
           list[indexKey].toString(),
-          int.parse(list[indexInitial].toString()),
+          int.parse(list[indexReturn].toString()),
         );
+        print('[${list[indexKey]}] return value [$isAllowed]');
 
         if (isAllowed) {
           // ローカルDBを削除して初期化
           await ApplicationDatabase.finalize();
           await ApplicationDatabase.database;
-          InitialDao possession = InitialDao();
-          if (!await possession.isAuthorized()) {
-            possession.initialize();
+          InitialDao initial = InitialDao();
+          if (!await initial.isAuthorized()) {
+            initial.initialize();
           }
 
           // 画面遷移

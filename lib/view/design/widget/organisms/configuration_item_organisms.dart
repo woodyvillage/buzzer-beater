@@ -1,4 +1,3 @@
-import 'package:buzzer_beater/const/configuration_const.dart';
 import 'package:buzzer_beater/model/form/dao/config_list_dao.dart';
 import 'package:buzzer_beater/view/design/widget/molecules/configuration_item_molecules.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +26,6 @@ class _ConfigurationItemOrganismsState
   Widget build(BuildContext context) {
     ConfigListDao dao = ConfigListDao();
     return ConfigurationItemMolecules(
-        item: dao.createDto(context, settingsLists[widget.index]));
+        item: dao.createDto(context, widget.item[widget.index]));
   }
 }

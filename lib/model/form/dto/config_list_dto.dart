@@ -5,11 +5,13 @@ class ConfigListDto extends BaseFormDto {
   Text caption;
   Text command;
   double? width;
+  IconData? icon;
 
   ConfigListDto({
     required super.callback,
     required this.caption,
     required this.command,
-    this.width,
+    this.icon,
+    this.width = 120,
   });
 }
