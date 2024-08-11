@@ -23,14 +23,14 @@ class ApplicationDatabase {
   static Future<Database> initialize() async {
     Directory directory = await getApplicationSupportDirectory();
     if (kDebugMode) {
-      print('initialize database[${DatabaseConst.databaseVersion}]');
+      print('initialize database[${databaseVersion}]');
     }
     return await openDatabase(
       join(
         directory.path,
-        DatabaseConst.databaseName,
+        databaseName,
       ),
-      version: DatabaseConst.databaseVersion,
+      version: databaseVersion,
       onCreate: _onCreate,
       onUpgrade: _onUpgrade,
     );
@@ -45,7 +45,7 @@ class ApplicationDatabase {
     return await deleteDatabase(
       join(
         directory.path,
-        DatabaseConst.databaseName,
+        databaseName,
       ),
     );
   }
@@ -66,7 +66,7 @@ class ApplicationDatabase {
 
   static _execute(Database db, int previous, int current) async {
     for (var i = previous; i <= current; i++) {
-      var queries = DatabaseConst.ddlScripts[i.toString()];
+      var queries = ddlScripts[i.toString()];
       for (String query in queries!) {
         if (kDebugMode) {
           print(query);
