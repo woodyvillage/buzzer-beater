@@ -9,12 +9,11 @@ const int indexGeneral = 0;
 // コンフィグレーションのページネーム
 const String settingsGeneral = 'GENERAL';
 
+// =============================================================================
+// アクションリスト
+// =============================================================================
 const String settingsInitialize = 'db_initialize';
-
-// =============================================================================
-// コンフィグアクションリスト
-// =============================================================================
 final settingsLists = [
-  // 種別(indexType),キー(indexKey),識別子(indexName),初期値(indexInitial),固定値
+  // 種別(indexType),キー(indexKey),識別子(indexName),返却値(indexReturn),初期値(indexInitial)
   [patternButton, 'C01', settingsInitialize, typeNothing, stringNull],
 ];

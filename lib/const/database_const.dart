@@ -1,28 +1,24 @@
-class DatabaseConst {
-  // データベース定義
-  static const databaseName = 'BuzzerBeater.db';
-  static const databaseVersion = 2;
+// =============================================================================
+// データベース定数
+// =============================================================================
+const databaseName = 'BuzzerBeater.db';
+const databaseVersion = 2;
 
-  // テーブル共通
-  static const columnNo = 'no';
-  static const columnUuid = 'uuid';
+const tableInitial = 'initial';
+const tableTeam = 'teams';
 
-  // イニシャルテーブル
-  static const tableInitial = 'initial';
+const columnNo = 'no';
+const columnUuid = 'uuid';
+const columnName = 'teams_name';
+const columnShortName = 'teams_shortname';
+const columnArea = 'teams_area';
+const columnCoach = 'teams_coach';
+const columnMember = 'teams_member';
 
-  // チームテーブル
-  static const tableTeam = 'teams';
-  static const columnName = 'name';
-  static const columnShortName = 'shortname';
-  static const columnArea = 'area';
-  static const columnCoach = 'coach';
-  static const columnMember = 'member';
-
-  static final ddlScripts = {
-    '0': ["SELECT $columnNo FROM $tableInitial;"],
-    '1': ["CREATE TABLE $tableInitial ($columnNo INTEGER NOT NULL);"],
-    '2': [
-      "CREATE TABLE $tableTeam ($columnNo INTEGER PRIMARY KEY AUTOINCREMENT, $columnName TEXT NOT NULL, $columnShortName TEXT NOT NULL, $columnArea TEXT NOT NULL, $columnCoach INTEGER NOT NULL, $columnMember INTEGER NOT NULL);"
-    ],
-  };
-}
+final ddlScripts = {
+  '0': ["SELECT $columnNo FROM $tableInitial;"],
+  '1': ["CREATE TABLE $tableInitial ($columnNo INTEGER NOT NULL);"],
+  '2': [
+    "CREATE TABLE $tableTeam ($columnNo INTEGER PRIMARY KEY AUTOINCREMENT, $columnName TEXT NOT NULL, $columnShortName TEXT NOT NULL, $columnArea TEXT NOT NULL, $columnCoach INTEGER NOT NULL, $columnMember INTEGER NOT NULL);"
+  ],
+};

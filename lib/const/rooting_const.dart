@@ -18,12 +18,29 @@ final PageController settingsController = PageController(
 );
 
 // =============================================================================
+// アプリコンテンツレイヤに配置するフローティングボタン
+// =============================================================================
+final floaterClasses = [
+  const TeamBody(),
+  const MemberBody(),
+];
+
+final floaterIcon = [
+  const Icon(Icons.add_home),
+  const Icon(Icons.group_add),
+  null,
+];
+
+final List<String> floaterText = [
+  floaterTeam,
+  floaterMember,
+];
+
+// =============================================================================
 // アプリコンテンツレイヤに配置する可変ページャー
 // =============================================================================
 final List<Widget> contentsClasses = [
-  // チーム
   const TeamBody(),
-  // メンバー
   const MemberBody(),
 ];
 
@@ -50,23 +67,4 @@ final settingsIcons = [
 
 final List<String> settingsText = [
   settingsGeneral,
-];
-
-// =============================================================================
-// アプリコンテンツレイヤに配置するフローティングボタン
-// =============================================================================
-final floaterClasses = [
-  const TeamBody(),
-  const MemberBody(),
-];
-
-final floaterIcon = [
-  const Icon(Icons.add_home),
-  const Icon(Icons.group_add),
-  null,
-];
-
-final List<String> floaterText = [
-  floaterTeam,
-  floaterMember,
 ];
