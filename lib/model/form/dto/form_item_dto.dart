@@ -7,6 +7,7 @@ class FormItemDto extends BaseItemDto {
   IconData? icon;
 
   FormItemDto({
+    required super.type,
     required super.keyword,
     super.callback,
     required this.caption,

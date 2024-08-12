@@ -1,5 +1,6 @@
 import 'package:buzzer_beater/const/common_const.dart';
 import 'package:buzzer_beater/model/form/dto/form_item_dto.dart';
+import 'package:buzzer_beater/utility/callback_utility.dart';
 import 'package:buzzer_beater/utility/contents_utility.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class FormItemDao {
   ) {
     FormItemDto dto = _create(context, item);
     if (hasCallback) {
-      dto.keyword = item[indexKeyword].toString();
+      dto.callback = makeCallback(context, item);
     }
     return dto;
   }
@@ -21,6 +22,7 @@ class FormItemDao {
     List<Object> item,
   ) {
     return FormItemDto(
+      type: item[indexType].toString(),
       keyword: item[indexKeyword].toString(),
       caption: getText(context, item[indexKeyword].toString()),
       command: getDesc(context, item[indexKeyword].toString()),

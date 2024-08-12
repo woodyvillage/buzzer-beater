@@ -20,7 +20,9 @@ class _TeamFormOrganismsState extends State<TeamFormOrganisms> {
   Widget build(BuildContext context) {
     FormItemDao dao = FormItemDao();
     FormItemDto dto = dao.createDto(context, widget.item, true);
-    switch (dto.keyword) {
+    switch (dto.type) {
+      case patternEditor:
+        return TextInputMolecules(item: dto);
       default:
         return const Row();
     }
