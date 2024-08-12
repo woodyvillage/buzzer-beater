@@ -1,6 +1,7 @@
 import 'package:buzzer_beater/const/common_const.dart';
 import 'package:buzzer_beater/model/form/dao/form_item_dao.dart';
 import 'package:buzzer_beater/model/form/dto/form_item_dto.dart';
+import 'package:buzzer_beater/view/design/widget/molecules/team_picture_molecules.dart';
 import 'package:buzzer_beater/view/design/widget/molecules/text_input_molecules.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,8 @@ class _TeamFormOrganismsState extends State<TeamFormOrganisms> {
     switch (dto.type) {
       case patternEditor:
         return TextInputMolecules(item: dto);
+      case patternPicker:
+        return TeamPictureMolecules(item: dto);
       default:
         return const Row();
     }
