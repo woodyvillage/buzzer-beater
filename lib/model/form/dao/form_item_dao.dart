@@ -1,4 +1,5 @@
 import 'package:buzzer_beater/const/common_const.dart';
+import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
 import 'package:buzzer_beater/model/form/dto/form_item_dto.dart';
 import 'package:buzzer_beater/utility/callback_utility.dart';
 import 'package:buzzer_beater/utility/contents_utility.dart';
@@ -9,10 +10,14 @@ class FormItemDao {
     BuildContext context,
     List<Object> item,
     bool hasCallback,
+    List<FormButtonDto> button,
   ) {
     FormItemDto dto = _create(context, item);
     if (hasCallback) {
       dto.callback = makeCallback(context, item);
+    }
+    if (button != []) {
+      dto.button = button;
     }
     return dto;
   }

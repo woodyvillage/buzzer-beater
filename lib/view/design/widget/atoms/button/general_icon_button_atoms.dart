@@ -1,4 +1,3 @@
-import 'package:buzzer_beater/const/common_const.dart';
 import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
 import 'package:buzzer_beater/view/design/wrapper/atom_widget.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,7 @@ class GeneralIconButtonAtoms extends AtomWidget {
   Widget buildMaterial(BuildContext context) {
     return ElevatedButton.icon(
       icon: Icon(item.icon),
-      label: item.caption ?? const Text(stringNull),
+      label: Text(item.caption),
       onPressed: item.callback,
       style: ElevatedButton.styleFrom(
         foregroundColor: item.foreColor,

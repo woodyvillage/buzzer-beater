@@ -28,5 +28,5 @@ final teamItemLists = [
   [patternEditor, 'AT02', applicationTeamName, typeString],
   [patternEditor, 'AT03', applicationTeamShortName, typeString],
   [patternEditor, 'AT04', applicationTeamRegion, typeString],
-  // [patternCommand, 'AT09', stringNull, typeNothing],
+  [patternCommand, 'AT09', stringNull, typeNothing],
 ];

@@ -14,10 +14,10 @@ String getText(BuildContext context, String keyword) {
       return AppLocalizations.of(context)!.teams_shortname;
     case 'AT04':
       return AppLocalizations.of(context)!.teams_region;
-    // case 'C02':
-    //   return Text(AppLocalizations.of(context)!.account_minimum);
-    // case 'C03':
-    //   return Text(AppLocalizations.of(context)!.account_maximum);
+    case 'submit':
+      return AppLocalizations.of(context)!.submit;
+    case 'cancel':
+      return AppLocalizations.of(context)!.cancel;
     // case 'C04':
     //   return Text(AppLocalizations.of(context)!.account_remarks);
     default:

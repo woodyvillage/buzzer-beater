@@ -8,8 +8,9 @@ class FormButtonDto extends BaseItemDto {
   IconData? icon;
 
   FormButtonDto({
+    required super.type,
     required super.keyword,
-    super.callback,
+    required super.callback,
     required this.caption,
     this.foreColor,
     this.backColor,
