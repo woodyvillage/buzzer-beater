@@ -1,12 +1,13 @@
+import 'package:buzzer_beater/model/form/dto/form_item_dto.dart';
 import 'package:buzzer_beater/view/design/widget/molecules/confirm_dialog_molecules.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmDialogOrganisms extends StatefulWidget {
   const ConfirmDialogOrganisms({
     super.key,
-    required this.title,
+    required this.item,
   });
-  final String title;
+  final FormItemDto item;
 
   @override
   State createState() => _ConfirmDialogOrganismsState();
@@ -15,6 +16,6 @@ class ConfirmDialogOrganisms extends StatefulWidget {
 class _ConfirmDialogOrganismsState extends State<ConfirmDialogOrganisms> {
   @override
   Widget build(BuildContext context) {
-    return ConfirmDialogMolecules(title: widget.title);
+    return ConfirmDialogMolecules(item: widget.item);
   }
 }
