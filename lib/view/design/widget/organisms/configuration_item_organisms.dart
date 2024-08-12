@@ -6,10 +6,8 @@ class ConfigurationItemOrganisms extends StatefulWidget {
   const ConfigurationItemOrganisms({
     super.key,
     required this.item,
-    required this.index,
   });
-  final List<List<Object>> item;
-  final int index;
+  final List<Object> item;
 
   @override
   State createState() => _ConfigurationItemOrganismsState();
@@ -18,14 +16,9 @@ class ConfigurationItemOrganisms extends StatefulWidget {
 class _ConfigurationItemOrganismsState
     extends State<ConfigurationItemOrganisms> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     ConfigListDao dao = ConfigListDao();
     return ConfigurationItemMolecules(
-        item: dao.createDto(context, widget.item[widget.index]));
+        item: dao.createDto(context, widget.item));
   }
 }

@@ -33,7 +33,7 @@ VoidCallback makeCallback(
       callback = makeButtonCallback(context, list);
       break;
     default:
-      callback = Void as VoidCallback;
+      callback = () {};
       break;
   }
   return callback;

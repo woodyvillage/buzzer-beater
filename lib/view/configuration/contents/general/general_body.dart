@@ -15,8 +15,7 @@ class GeneralBody extends StatelessWidget {
           itemCount: settingsLists.length,
           itemBuilder: (context, index) {
             return ConfigurationItemOrganisms(
-              item: settingsLists,
-              index: index,
+              item: settingsLists[index],
             );
           },
         ),
