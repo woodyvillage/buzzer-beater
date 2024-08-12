@@ -25,7 +25,9 @@ const int intNull = 0;
 // コントロールの識別子
 // =============================================================================
 const String patternButton = 'BTN';
-const String patternEditor = 'TXT';
+const String patternEditor = 'EDT';
+const String patternPicker = 'PCK';
+const String patternCommand = 'CMD';
 
 // =============================================================================
 // コマンドボタン
