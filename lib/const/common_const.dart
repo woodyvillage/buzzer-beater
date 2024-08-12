@@ -4,10 +4,10 @@
 
 // アクションリストのインデックス
 const int indexType = 0;
-const int indexKey = 1;
+const int indexKeyword = 1;
 const int indexName = 2;
 const int indexReturn = 3;
-const int indexInitial = 4;
+// const int indexInitial = 4;
 
 // 返却値
 const int typeNothing = 0;

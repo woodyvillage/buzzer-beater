@@ -40,22 +40,21 @@ VoidCallback makeCallback(
 }
 
 // =============================================================================
-// [Conguration] indexKey別のコールバック
+// [Conguration] indexKeyword別のコールバック
 // =============================================================================
 VoidCallback makeButtonCallback(
   BuildContext context,
   List<Object> list,
 ) {
-  switch (list[indexKey]) {
+  switch (list[indexKeyword]) {
     // [Configuration] Initialize
     case 'C01':
       return () async {
         bool isAllowed = await DialogActionService.notification(
           context,
-          list[indexKey].toString(),
-          int.parse(list[indexReturn].toString()),
+          list,
         );
-        print('[${list[indexKey]}] return value [$isAllowed]');
+        print('[${list[indexKeyword]}] return value [$isAllowed]');
 
         if (isAllowed) {
           // ローカルDBを削除して初期化

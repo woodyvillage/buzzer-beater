@@ -14,6 +14,6 @@ const String settingsGeneral = 'GENERAL';
 // =============================================================================
 const String settingsInitialize = 'db_initialize';
 final settingsLists = [
-  // 種別(indexType),キー(indexKey),識別子(indexName),返却値(indexReturn),初期値(indexInitial)
-  [patternButton, 'C01', settingsInitialize, typeNothing, stringNull],
+  // 種別(indexType),キー(indexKeyword),識別子(indexName),返却値(indexReturn)
+  [patternButton, 'C01', settingsInitialize, typeNothing],
 ];
