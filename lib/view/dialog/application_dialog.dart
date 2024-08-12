@@ -1,8 +1,8 @@
-import 'package:buzzer_beater/model/form/dto/abstract/base_form_dto.dart';
+import 'package:buzzer_beater/model/form/dto/abstract/base_item_dto.dart';
 import 'package:buzzer_beater/view/design/widget/organisms/confirm_dialog_organisms.dart';
 import 'package:flutter/material.dart';
 
-Future applicationDialog<T extends BaseFormDto>({
+Future applicationDialog<T extends BaseItemDto>({
   required BuildContext context,
   required String title,
   required Object value,
@@ -18,7 +18,7 @@ Future applicationDialog<T extends BaseFormDto>({
   );
 }
 
-Widget dialogBuilder<T extends BaseFormDto>(
+Widget dialogBuilder<T extends BaseItemDto>(
   String title,
   Object value,
   int initial,
