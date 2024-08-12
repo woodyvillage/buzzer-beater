@@ -14,7 +14,7 @@ class ConfigurationItemMolecules extends MoleculeWidget {
   @override
   Widget buildMolecule(final BuildContext context) {
     return ListTile(
-      title: item.caption,
+      title: Text(item.caption),
       trailing: SizedBox(
         width: item.width,
         child: GeneralButtonAtoms(
@@ -26,7 +26,7 @@ class ConfigurationItemMolecules extends MoleculeWidget {
 
   FormButtonDto buildButton(ConfigListDto item) {
     return FormButtonDto(
-      key: item.key,
+      keyword: item.keyword,
       caption: item.command,
       foreColor: Colors.white,
       backColor: Colors.green,

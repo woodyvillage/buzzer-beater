@@ -1,11 +1,11 @@
 import 'dart:ui';
 
 abstract class BaseItemDto {
-  String key;
+  String keyword;
   VoidCallback? callback;
 
   BaseItemDto({
-    required this.key,
+    required this.keyword,
     this.callback,
   });
 }

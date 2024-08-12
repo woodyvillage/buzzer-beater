@@ -10,10 +10,10 @@ class ConfigListDao {
     List<Object> item,
   ) {
     return ConfigListDto(
-      key: item[indexKey].toString(),
+      keyword: item[indexKeyword].toString(),
       callback: makeCallback(context, item),
-      caption: getText(context, item[indexKey].toString()),
-      command: getDesc(context, item[indexKey].toString()),
+      caption: getText(context, item[indexKeyword].toString()),
+      command: getDesc(context, item[indexKeyword].toString()),
       width: 100,
     );
   }
