@@ -7,6 +7,10 @@
   "cancel": "cancel",
   "submit": "ok",
 
+  "teams_name": "team name",
+  "teams_shortname": "team short name",
+  "teams_region": "area",
+
   "db_initialize": "Initialize the data in the terminal",
   "init": "Initialize",
 

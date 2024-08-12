@@ -7,6 +7,10 @@
   "cancel": "取消",
   "submit": "確定",
 
+  "teams_name": "チーム名",
+  "teams_shortname": "チーム略称",
+  "teams_region": "地域",
+
   "db_initialize": "端末内のデータを初期化する",
   "init": "初期化",
   
