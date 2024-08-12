@@ -5,10 +5,8 @@ import 'package:flutter/material.dart';
 class TextInputAtoms extends AtomWidget {
   const TextInputAtoms({
     super.key,
-    required this.controller,
     required this.item,
   });
-  final TextEditingController controller;
   final FormItemDto item;
 
   @override
@@ -16,6 +14,7 @@ class TextInputAtoms extends AtomWidget {
     return Container(
       margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
       child: TextFormField(
+        controller: item.control,
         decoration: InputDecoration(
           labelText: item.caption,
           labelStyle: TextStyle(

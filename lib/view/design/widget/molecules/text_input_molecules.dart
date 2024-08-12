@@ -12,9 +12,8 @@ class TextInputMolecules extends MoleculeWidget {
 
   @override
   Widget buildMolecule(final BuildContext context) {
-    TextEditingController controller = TextEditingController();
+    item.control = TextEditingController();
     return TextInputAtoms(
-      controller: controller,
       item: item,
     );
   }
