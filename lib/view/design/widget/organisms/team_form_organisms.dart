@@ -17,11 +17,6 @@ class TeamFormOrganisms extends StatefulWidget {
 
 class _TeamFormOrganismsState extends State<TeamFormOrganisms> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     FormItemDao dao = FormItemDao();
     FormItemDto dto = dao.createDto(context, widget.item, true);

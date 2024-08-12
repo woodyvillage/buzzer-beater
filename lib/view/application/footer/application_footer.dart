@@ -12,11 +12,6 @@ class ApplicationFooter extends StatefulWidget {
 }
 
 class _ApplicationFooterState extends State<ApplicationFooter> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
   void onItemTapped(int index) {
     setState(() {
       contentsController.animateToPage(

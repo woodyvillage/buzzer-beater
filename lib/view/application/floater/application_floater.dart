@@ -16,11 +16,6 @@ class _ApplicationFloaterState extends State<ApplicationFloater> {
   final bottomNavigationBarItems = <BottomNavigationBarItem>[];
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     // ChangeNotifierProviderの通知を見ている
     var index = Provider.of<NavigatorPositionService>(context).selectedRoute;

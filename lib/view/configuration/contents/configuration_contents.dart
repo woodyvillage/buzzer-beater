@@ -10,11 +10,6 @@ class ConfigurationContents extends StatefulWidget {
 
 class _ConfigurationContentsState extends State<ConfigurationContents> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
