@@ -26,6 +26,7 @@ class ConfigurationItemMolecules extends MoleculeWidget {
 
   FormButtonDto buildButton(ConfigListDto item) {
     return FormButtonDto(
+      type: item.type,
       keyword: item.keyword,
       caption: item.command,
       foreColor: Colors.white,

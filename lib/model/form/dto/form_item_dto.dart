@@ -5,6 +5,8 @@ class FormItemDto extends BaseItemDto {
   String caption;
   String command;
   IconData? icon;
+  TextEditingController? control;
+  String? image;
 
   FormItemDto({
     required super.type,
@@ -13,5 +15,7 @@ class FormItemDto extends BaseItemDto {
     required this.caption,
     required this.command,
     this.icon,
+    this.control,
+    this.image,
   });
 }

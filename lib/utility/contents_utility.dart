@@ -6,13 +6,14 @@ String getText(BuildContext context, String keyword) {
   switch (keyword) {
     case 'C01':
       return AppLocalizations.of(context)!.db_initialize;
-    // case 'DEPOSIT':
-    //   return Text(AppLocalizations.of(context)!.deposit);
-    // case 'WITHDRAW':
-    //   return Text(AppLocalizations.of(context)!.withdraw);
+    case 'AT01':
+      return AppLocalizations.of(context)!.teams_picture;
+    case 'AT02':
+      return AppLocalizations.of(context)!.teams_name;
     case 'AT03':
+      return AppLocalizations.of(context)!.teams_shortname;
     case 'AT04':
-      return AppLocalizations.of(context)!.db_initialize;
+      return AppLocalizations.of(context)!.teams_region;
     // case 'C02':
     //   return Text(AppLocalizations.of(context)!.account_minimum);
     // case 'C03':
@@ -28,9 +29,14 @@ String getDesc(BuildContext context, String keyword) {
   switch (keyword) {
     case 'C01':
       return AppLocalizations.of(context)!.init;
+    case 'AT01':
+      return AppLocalizations.of(context)!.teams_picture;
+    case 'AT02':
+      return AppLocalizations.of(context)!.teams_name;
     case 'AT03':
+      return AppLocalizations.of(context)!.teams_shortname;
     case 'AT04':
-      return AppLocalizations.of(context)!.init;
+      return AppLocalizations.of(context)!.teams_region;
     // case 'C02':
     // case 'C03':
     // case 'C04':
