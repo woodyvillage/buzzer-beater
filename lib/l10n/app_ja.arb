@@ -7,10 +7,10 @@
   "cancel": "取消",
   "submit": "確定",
 
-  "teams_picture": "チーム画像",
-  "teams_name": "チーム名",
-  "teams_shortname": "チーム略称",
-  "teams_region": "地域",
+  "teams_picture": "{index,select,NAME{チーム画像} DESC{チームの画像を選択してください} other{}}",
+  "teams_name": "{index,select,NAME{チーム名称} DESC{チームの名称を入力してください} other{}}",
+  "teams_shortname": "{index,select,NAME{チーム略称} DESC{チームの略称を入力してください} other{}}",
+  "teams_region": "{index,select,NAME{地域} DESC{地域を選択してください} other{}}",
 
   "db_initialize": "端末内のデータを初期化する",
   "init": "初期化",

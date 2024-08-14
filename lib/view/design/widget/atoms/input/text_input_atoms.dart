@@ -22,7 +22,7 @@ class TextInputAtoms extends AtomWidget {
             color: Colors.green[300],
           ),
           floatingLabelStyle: const TextStyle(fontSize: 16),
-          hintText: item.command,
+          hintText: item.description,
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
             borderSide: const BorderSide(

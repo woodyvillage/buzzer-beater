@@ -22,11 +22,14 @@ const String applicationTeamPicture = 'teams_picture';
 const String applicationTeamName = 'teams_name';
 const String applicationTeamShortName = 'teams_shortname';
 const String applicationTeamRegion = 'teams_region';
+
+const int typeYesNo = 0;
+
 final teamItemLists = [
   // 種別(indexType),キー(indexKeyword),識別子(indexName),返却値(indexReturn)
   [patternPicker, 'AT01', applicationTeamPicture, typeString],
   [patternEditor, 'AT02', applicationTeamName, typeString],
   [patternEditor, 'AT03', applicationTeamShortName, typeString],
   [patternEditor, 'AT04', applicationTeamRegion, typeString],
-  [patternCommand, 'AT09', stringNull, typeNothing],
+  [patternCommand, 'AT09', stringNull, typeYesNo],
 ];

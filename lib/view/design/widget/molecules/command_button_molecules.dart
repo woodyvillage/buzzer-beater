@@ -1,4 +1,4 @@
-import 'package:buzzer_beater/model/form/dto/form_item_dto.dart';
+import 'package:buzzer_beater/model/form/dto/form_button_dto.dart';
 import 'package:buzzer_beater/view/design/widget/atoms/button/general_icon_button_atoms.dart';
 import 'package:buzzer_beater/view/design/widget/atoms/padding/separator_atoms.dart';
 import 'package:buzzer_beater/view/design/wrapper/molecules_widget.dart';
@@ -9,7 +9,7 @@ class CommandButtonMolecules extends MoleculeWidget {
     super.key,
     required this.item,
   });
-  final FormItemDto item;
+  final List<FormButtonDto> item;
 
   @override
   Widget buildMolecule(final BuildContext context) {
@@ -24,11 +24,11 @@ class CommandButtonMolecules extends MoleculeWidget {
 
   List<Widget> buildMolecules(final BuildContext context) {
     List<Widget> containers = [];
-    for (int i = 0; i < item.button!.length; i++) {
+    for (int i = 0; i < item.length; i++) {
       if (i != 0) {
         containers.add(const SeparatorAtoms(width: 5));
       }
-      containers.add(GeneralIconButtonAtoms(item: item.button![i]));
+      containers.add(GeneralIconButtonAtoms(item: item[i]));
     }
     return containers;
   }

@@ -7,10 +7,10 @@
   "cancel": "cancel",
   "submit": "ok",
 
-  "teams_picture": "team picture",
-  "teams_name": "team name",
-  "teams_shortname": "team short name",
-  "teams_region": "area",
+  "teams_picture": "{index,select,NAME{team picture} DESC{チームの画像を選択してください} other{}}",
+  "teams_name": "{index,select,NAME{team name} DESC{チームの名称を入力してください} other{}}",
+  "teams_shortname": "{index,select,NAME{team short name} DESC{チームの略称を入力してください} other{}}",
+  "teams_region": "{index,select,NAME{area} DESC{地域を選択してください} other{}}",
 
   "db_initialize": "Initialize the data in the terminal",
   "init": "Initialize",
