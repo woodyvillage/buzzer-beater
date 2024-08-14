@@ -11,7 +11,7 @@ class DialogActionService {
     bool result;
     try {
       FormItemDao dao = FormItemDao();
-      FormItemDto dto = dao.createDto(context, list, false, []);
+      FormItemDto dto = dao.createDto(context, list, false);
       result = await applicationDialog(
         context: context,
         item: dto,

@@ -1,5 +1,4 @@
 import 'dart:ffi';
-
 import 'package:buzzer_beater/const/common_const.dart';
 import 'package:buzzer_beater/database/application_database.dart';
 import 'package:buzzer_beater/model/data/dao/initial_dao.dart';
@@ -71,6 +70,12 @@ VoidCallback makeButtonCallback(
           }
         }
       };
+    // [Application] Command.cancel
+    case 'CMD01':
+      return makeReturnCallback(context);
+    // [Application] Command.cancel
+    case 'CMD02':
+      return makeReturnCallback(context);
     default:
       return Void as VoidCallback;
   }
